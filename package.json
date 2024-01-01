@@ -1,5 +1,6 @@
 {
-	"name": "website",
+	"name": "banyan",
+	"description": "A simple theme for a statically generated site written in SvelteKit.",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
