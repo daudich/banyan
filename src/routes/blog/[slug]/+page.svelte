@@ -1,11 +1,19 @@
-<!-- src/routes/[slug]/+page.svelte -->
+<!-- src/routes/blog/+page.svelte -->
 <script>
 	export let data;
-    const { title, date, Content } = data;
 </script>
 
-<article>
-	<h1>{title}</h1>
-	<p>Published: {date}</p>
-	<Content />
-</article>
+<h1>Blog</h1>
+
+<ul>
+	{#each data.posts as post}
+		<li>
+			<h2>
+				<a href={post.path}>
+					{post.meta.title}
+				</a>
+			</h2>
+			Published {post.meta.date}
+		</li>
+	{/each}
+</ul>
