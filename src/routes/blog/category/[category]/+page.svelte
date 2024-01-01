@@ -4,6 +4,6 @@
 	export let data;
 </script>
 
-<h1>Blog</h1>
+<h1>Post filed as {data.category}</h1>
 
 <Posts posts={data.posts}/>
