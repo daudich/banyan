@@ -1,8 +1,12 @@
-<!-- Alternate approach! 👀 -->
 <script>
 	export let data;
 	const { title, date, categories, Content } = data;
 </script>
+
+<svelte:head>
+	<title>My blog - {title}</title>
+	<meta property="og:title" content={title} />
+</svelte:head>
 
 <article>
 	<h1>{title}</h1>
