@@ -1,0 +1,13 @@
+@use "sass:map";
+@use "./vars";
+
+#banyan {
+    min-height: 100vh;
+
+    @if vars.$dark-theme {
+		background: map.get(vars.$dark-theme-colours, "background");
+        h1 {
+            color: map.get(vars.$dark-theme-colours, "h1");
+        }
+	}
+}

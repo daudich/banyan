@@ -1,19 +1,25 @@
 <!-- +layout.svelte -->
-<script>
+<script lang="ts">
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
-	import '$lib/styles/style.scss';
+	import '$lib/styles/global.scss';
 	import { fade } from 'svelte/transition';
 
 	export let data;
 </script>
 
-<Header />
+<div
+	id="banyan"
+>
+	<Header />
+	
+	<div class="layout">
+		{#key data.currentRoute}
+			<main in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }}>
+				<slot />
+			</main>
+		{/key}
+	</div>
 
-{#key data.currentRoute}
-	<main in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }}>
-		<slot />
-	</main>
-{/key}
-
-<Footer />
+	<Footer />
+</div>
