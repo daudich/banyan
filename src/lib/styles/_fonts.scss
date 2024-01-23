@@ -1,0 +1,29 @@
+@font-face {
+	font-family: 'Libertine';
+	src:
+		local('Libertine'),
+		url('/fonts/LinLibertine_R.otf') format('opentype');
+	font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src:
+		local('Raleway'),
+		url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+	font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+	font-family: 'Ubuntu Mono';
+	src:
+		local('Ubuntu Mono'),
+		url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

@@ -5,9 +5,14 @@
     min-height: 100vh;
 
     @if vars.$dark-theme {
-		background: map.get(vars.$dark-theme-colours, "background");
+		background: map.get(vars.$dark-theme-colours, "paper");
         h1 {
-            color: map.get(vars.$dark-theme-colours, "h1");
+            color: map.get(vars.$dark-theme-colours, "ink-h1");
+            font-family: map.get(vars.$font, "heading");
+            font-size: 8rem;
+        }
+        h2 {
+            font-family: map.get(vars.$font, "body")
         }
 	}
 }

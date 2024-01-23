@@ -1,9 +1,20 @@
+@use './fonts';
+
 $dark-theme: true !default;
+
 $dark-theme-colours: (
-	"bg": hsla(230, 60%, 9%, 1),
-	"h1": hsla(39, 66%, 55%, 1)
+	"paper": hsla(230, 60%, 9%, 1),
+	"ink-h1": hsla(39, 66%, 55%, 1)
 );
+
 $light-theme-colors: (
-	"bg": hsla(39, 57%, 88%, 1),
-	"h1": hsla(236, 66%, 20%, 1)
+	"paper": hsla(39, 57%, 88%, 1),
+	"ink-h1": hsla(236, 66%, 20%, 1)
+);
+
+$font: (
+	heading: ('Raleway', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		'Helvetica Neue', Arial, sans-serif),
+	body: ('Libertine', Georgia, serif),
+	code: ('Ubuntu Mono', Consolas, Monaco, 'Andale Mono', monospace),
 );
