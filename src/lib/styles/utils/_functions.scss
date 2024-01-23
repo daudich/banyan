@@ -1,0 +1,31 @@
+/// This file contains all the custom defined SASS helper functions.
+
+@use 'sass:list';
+
+/// Retrive the values for the given keys from the provided map.
+/// @param {map} $map Map
+/// @param {list[string} $keys Key/s
+/// @return {list[string]} Values
+@function _val($map, $keys...) {
+    $result: ();
+
+    @each $key in $keys {
+        $result: list.append($result, map.get($map, $key));
+    }
+
+    @return $result;
+}
+
+/// Gets a font value.
+/// @param {string} $keys Key(s)
+/// @return {string} Value
+@function _font($keys...) {
+	@return val($font, $keys...);
+}
+
+/// Gets a size value.
+/// @param {string} $keys Key(s).
+/// @return {string} Value.
+@function _size($keys...) {
+	@return val($size, $keys...);
+}

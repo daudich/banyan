@@ -1,0 +1,36 @@
+@use '../components/fonts';
+
+$dark-theme: true !default;
+
+$dark-theme-colours: (
+	"paper": hsla(230, 60%, 9%, 1),
+	"ink-h1": hsla(39, 66%, 55%, 1)
+);
+
+$light-theme-colors: (
+	"paper": hsla(39, 57%, 88%, 1),
+	"ink-h1": hsla(236, 66%, 20%, 1)
+);
+
+$font: (
+	heading: ('Raleway', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		'Helvetica Neue', Arial, sans-serif),
+	body: ('Libertine', Georgia, serif),
+	code: ('Ubuntu Mono', Consolas, Monaco, 'Andale Mono', monospace),
+);
+
+:root {
+	--maxWidth: 34rem;
+	--sidebarWidth: 15rem;
+	--margin: var(--quarterNote);
+
+	--sixteenthNote: calc(var(--quarterNote) / 4);
+	--eighthNote: calc(var(--quarterNote) / 2);
+	--quarterNote: 1.25rem;
+	--dottedQuarterNote: calc(var(--quarterNote) * 1.5);
+	--halfNote: calc(var(--quarterNote) * 2);
+	--dottedHalfNote: calc(var(--quarterNote) * 3);
+	--wholeNote: calc(var(--quarterNote) * 4);
+	--tiedWholeNote: calc(var(--quarterNote) * 5);
+	--dottedWholeNote: calc(var(--quarterNote) * 6);
+}

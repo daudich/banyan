@@ -2,7 +2,7 @@
 <script lang="ts">
 	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
-	import '$lib/styles/global.scss';
+	import '$lib/styles/base/global.scss';
 	import { fade } from 'svelte/transition';
 
 	export let data;

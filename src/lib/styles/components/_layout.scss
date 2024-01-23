@@ -1,0 +1,12 @@
+@use '../base/vars';
+
+.layout {
+    margin: var(--quarterNote) var(--margin) var(--wholeNote) var(--margin);
+	width: calc(100% - (var(--margin) * 2));
+	position: relative;
+	background: transparent;
+
+    main {
+        width: 100%;
+    }
+}

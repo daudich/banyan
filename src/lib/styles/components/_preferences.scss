@@ -1,5 +1,8 @@
-@use "sass:map";
-@use "./vars";
+/// These styles store the specific preferences for dark and light themes.
+/// Also included are styles that are common across both but only the 'colouring' of the canvas.
+
+@use 'sass:map';
+@use '../base/vars';
 
 #banyan {
     min-height: 100vh;
@@ -9,7 +12,6 @@
         h1 {
             color: map.get(vars.$dark-theme-colours, "ink-h1");
             font-family: map.get(vars.$font, "heading");
-            font-size: 8rem;
         }
         h2 {
             font-family: map.get(vars.$font, "body")

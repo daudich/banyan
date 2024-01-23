@@ -1,0 +1,11 @@
+body {
+    font-family: _font('body');
+}
+
+h1, .h1 {
+    font-family: _font('heading');
+}
+
+code, .code {
+    font-family: _font('code');
+}
