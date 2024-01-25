@@ -2,19 +2,18 @@
 /// Also included are styles that are common across both but only the 'colouring' of the canvas.
 
 @use 'sass:map';
+
 @use '../base/vars';
+@use '../utils/functions' as _;
 
 #banyan {
     min-height: 100vh;
 
     @if vars.$dark-theme {
-		background: map.get(vars.$dark-theme-colours, "paper");
+		background: _.palette(true, 'paper');
+
         h1 {
-            color: map.get(vars.$dark-theme-colours, "ink-h1");
-            font-family: map.get(vars.$font, "heading");
-        }
-        h2 {
-            font-family: map.get(vars.$font, "body")
+            color: _.palette(true, 'ink-h1');
         }
 	}
 }

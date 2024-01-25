@@ -1,6 +1,9 @@
 /// This file contains all the custom defined SASS helper functions.
 
 @use 'sass:list';
+@use 'sass:map';
+
+@use '../base/vars';
 
 /// Retrive the values for the given keys from the provided map.
 /// @param {map} $map Map
@@ -16,16 +19,28 @@
     @return $result;
 }
 
-/// Gets a font value.
+/// Gets the font value for the given key.
 /// @param {string} $keys Key(s)
 /// @return {string} Value
-@function _font($keys...) {
-	@return val($font, $keys...);
+@function font($keys...) {
+	@return _val(vars.$font, $keys...);
 }
 
-/// Gets a size value.
+/// Gets the size value for the given key.
 /// @param {string} $keys Key(s).
 /// @return {string} Value.
-@function _size($keys...) {
-	@return val($size, $keys...);
+@function size($keys...) {
+	@return _val($size, $keys...);
+}
+
+/// Gets the colour values for either dark or light.
+/// @param {boolean} $dark Dark [false]
+/// @param {string} $keys Key(s)
+/// @return {string} Value
+@function palette($dark: false, $keys...) {
+    @if $dark {
+        @return _val(vars.$dark-theme-colours, $keys...);
+    }
+
+    @return _val(vars.$light-theme-colours, $keys...)
 }

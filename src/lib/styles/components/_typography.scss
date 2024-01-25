@@ -1,11 +1,15 @@
-body {
-    font-family: _font('body');
+/// This file defines all of the font stylings.
+
+@use '../utils/functions' as _;
+
+body, p {
+    font-family: _.font('body');
 }
 
 h1, .h1 {
-    font-family: _font('heading');
+    font-family: _.font('heading');
 }
 
 code, .code {
-    font-family: _font('code');
+    font-family: _.font('code');
 }
