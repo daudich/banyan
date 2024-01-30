@@ -1,5 +1,7 @@
 /// This file defines all of the variables used on the site.
 
+@use 'sass:map';
+
 @use '../components/fonts';
 
 $dark-theme: true !default;
@@ -19,20 +21,23 @@ $font: (
 		'Helvetica Neue', Arial, sans-serif),
 	body: ('Libertine', Georgia, serif),
 	code: ('Ubuntu Mono', Consolas, Monaco, 'Andale Mono', monospace),
+	weight: 400,
+	weight-bold: 700
+);
+
+$_quarterNote: 1.25rem;
+$size: (
+	sixteenthNote: calc($_quarterNote / 4),
+	eighthNote: calc($_quarterNote / 2),
+	quarterNote: $_quarterNote,
+	dottedQuarterNote: calc($_quarterNote * 1.5),
+	halfNote: calc($_quarterNote * 2),
+	dottedHalfNote: calc($_quarterNote * 3),
+	wholeNote: calc($_quarterNote * 4),
+	tiedWholeNote: calc($_quarterNote * 5),
+	dottedWholeNote: calc($_quarterNote * 6)
 );
 
 :root {
-	--maxWidth: 34rem;
-	--sidebarWidth: 15rem;
-	--margin: var(--quarterNote);
-
-	--sixteenthNote: calc(var(--quarterNote) / 4);
-	--eighthNote: calc(var(--quarterNote) / 2);
-	--quarterNote: 1.25rem;
-	--dottedQuarterNote: calc(var(--quarterNote) * 1.5);
-	--halfNote: calc(var(--quarterNote) * 2);
-	--dottedHalfNote: calc(var(--quarterNote) * 3);
-	--wholeNote: calc(var(--quarterNote) * 4);
-	--tiedWholeNote: calc(var(--quarterNote) * 5);
-	--dottedWholeNote: calc(var(--quarterNote) * 6);
+	--margin: $_quarterNote
 }

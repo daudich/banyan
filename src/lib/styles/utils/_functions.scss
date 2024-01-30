@@ -30,7 +30,7 @@
 /// @param {string} $keys Key(s).
 /// @return {string} Value.
 @function size($keys...) {
-	@return _val($size, $keys...);
+	@return _val(vars.$size, $keys...);
 }
 
 /// Gets the colour values for either dark or light.

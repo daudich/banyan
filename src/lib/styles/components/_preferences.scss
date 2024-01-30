@@ -1,5 +1,6 @@
 /// These styles store the specific preferences for dark and light themes.
 /// Also included are styles that are common across both but only the 'colouring' of the canvas.
+/// These styles include the header, page matter, and the footer.
 
 @use 'sass:map';
 
@@ -7,7 +8,13 @@
 @use '../utils/functions' as _;
 
 #banyan {
-    min-height: 100vh;
+    background: _.palette(true, 'paper');
+	color: _.palette(true, 'ink');
+	min-height: 100vh;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: auto 1fr auto;
+	width: 100%;
 
     @if vars.$dark-theme {
 		background: _.palette(true, 'paper');
