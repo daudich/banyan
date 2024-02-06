@@ -38,6 +38,33 @@ $size: (
 	dottedWholeNote: calc($_quarterNote * 6)
 );
 
+$breakpoints: (
+	xxs: 34rem,
+	xs: 42rem,
+	sm: 56rem,
+	md: 66rem,
+	lg: 82rem,
+	xl: 92rem,
+	xxl: 108rem,
+	xxxl: 122rem
+);
+
 :root {
-	--margin: $_quarterNote
+	--margin: $_quarterNote;
+
+	@media (min-width: map.get($breakpoints, 'xs')) {
+		--margin: var(--halfNote);
+	}
+
+	@media (min-width: map.get($breakpoints, 'sm')) {
+		--margin: var(--dottedHalfNote);
+	}
+
+	@media (min-width: map.get($breakpoints, 'xxl')) {
+		--margin: var(--wholeNote);
+	}
+
+	@media (min-width: map.get($breakpoints, 'xxxl')) {
+		--margin: var(--dottedWholeNote);
+	}
 }
