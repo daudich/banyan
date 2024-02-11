@@ -1,7 +1,9 @@
 /// Styling for the header
 
+@use '../utils/functions' as _;
+
 header {
-    padding: 1rem;
+    padding: _.size('halfNote') _.size('wholeNote');
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

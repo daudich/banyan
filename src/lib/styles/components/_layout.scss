@@ -4,7 +4,7 @@
 @use '../utils/functions' as _;
 
 .layout {
-    margin: _.size('quarterNote') _.size('quarterNote') _.size('wholeNote') _.size('quarterNote');
+    margin: _.size('quarterNote') _.size('wholeNote') _.size('quarterNote') _.size('wholeNote');
 	width: calc(100% - (var(--margin) * 2));
 	position: relative;
 	background: transparent;
