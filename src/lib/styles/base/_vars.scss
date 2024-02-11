@@ -6,16 +6,22 @@
 
 $dark-theme: true !default;
 
+$brand-colours: (
+	'black': hsla(230, 60%, 9%, 1),
+	'white': hsla(39, 57%, 88%, 1),
+	'yellow': hsla(39, 66%, 55%, 1)
+);
+
 $dark-theme-colours: (
-	'paper': hsla(230, 60%, 9%, 1),
-	'ink': hsla(39, 57%, 88%, 1),
-	'ink-h1': hsla(39, 66%, 55%, 1)
+	'paper': map.get($brand-colours, 'black'),
+	'ink': map.get($brand-colours, 'white'),
+	'ink-h1': map.get($brand-colours, 'yellow')
 );
 
 $light-theme-colours: (
-	'paper': hsla(39, 57%, 88%, 1),
-	'ink': hsla(236, 66%, 20%, 1),
-	'ink-h1': hsla(236, 66%, 20%, 1)
+	'paper': map.get($brand-colours, 'white'),
+	'ink': map.get($brand-colours, 'black'),
+	'ink-h1': map.get($brand-colours, 'yellow')
 );
 
 $font: (

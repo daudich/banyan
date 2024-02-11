@@ -33,6 +33,13 @@
 	@return _val(vars.$size, $keys...);
 }
 
+/// Gets the breakpoint value for the given key.
+/// @param {string} $keys Key(s).
+/// @return {string} Value.
+@function breakpoints($keys...) {
+	@return _val(vars.$breakpoints, $keys...);
+}
+
 /// Gets the colour values for either dark or light.
 /// @param {boolean} $dark Dark [true]
 /// @param {string} $keys Key(s)
