@@ -34,13 +34,13 @@
 }
 
 /// Gets the colour values for either dark or light.
-/// @param {boolean} $dark Dark [false]
+/// @param {boolean} $dark Dark [true]
 /// @param {string} $keys Key(s)
 /// @return {string} Value
-@function palette($dark: false, $keys...) {
-    @if $dark {
-        @return _val(vars.$dark-theme-colours, $keys...);
+@function palette($light, $keys...) {
+    @if not $light {
+        @return _val(vars.$light-theme-colours, $keys...);
     }
 
-    @return _val(vars.$light-theme-colours, $keys...)
+    @return _val(vars.$dark-theme-colours, $keys...)
 }

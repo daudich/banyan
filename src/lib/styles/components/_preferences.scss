@@ -6,6 +6,8 @@
 
 @use '../base/vars';
 @use '../utils/functions' as _;
+@use './header';
+@use './footer';
 
 #banyan {
     background: _.palette(true, 'paper');
@@ -16,11 +18,11 @@
 	grid-template-rows: auto 1fr auto;
 	width: 100%;
 
-    @if vars.$dark-theme {
-		background: _.palette(true, 'paper');
+    @if not vars.$dark-theme {
+		background: _.palette(false, 'paper');
 
         h1 {
-            color: _.palette(true, 'ink-h1');
+            color: _.palette(false, 'ink');
         }
 	}
 }
