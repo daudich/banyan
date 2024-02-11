@@ -45,7 +45,7 @@
 /// @param {string} $keys Key(s)
 /// @return {string} Value
 @function palette($light, $keys...) {
-    @if not $light {
+    @if $light {
         @return _val(vars.$light-theme-colours, $keys...);
     }
 

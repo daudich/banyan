@@ -16,7 +16,7 @@
         font-size: clamp(1.8rem, calc(1rem + 3vw), 3.5rem);
 
         strong {
-            color: _.palette(vars.$dark-theme, 'ink-h1');
+            color: _.palette(vars.$light-theme, 'ink-h1');
         }
     }
 
