@@ -20,13 +20,15 @@
 	// Container styles
 	.container {
 		display: flex;
-		flex-direction: row; // side by side layout
+		flex-direction: row;
 
-		// Ensure each child gets 50% of the width
 		> .text,
 		> .image {
 			width: 50%;
-			padding: calc(#{_.size('wholeNote')} * 2);
+		}
+
+		.image {
+			clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
 		}
 	}
 
