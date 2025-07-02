@@ -1,20 +1,28 @@
-/// Styling for the header
+/// Styling for the footer
+
+@use '../utils/functions' as _;
 
 footer {
-    padding: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    padding: _.size('halfNote') _.size('wholeNote');
 
-    ul {
-        margin: 0;
-        list-style-type: none;
-        display: flex;
-        gap: 1rem;
+    .column {
+        text-align: left;
+        ul {
+            margin: 0;
+            list-style-type: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
     }
-    
-    a {
-        text-decoration: none;
-        color: inherit;
+
+    .info {
+        a {
+            text-decoration: underline;
+        }
     }
 }
