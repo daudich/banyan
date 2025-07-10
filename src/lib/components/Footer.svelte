@@ -22,7 +22,7 @@
   </div>
 
   <div class="column info">
-    <p>&copy; {new Date().getFullYear()} Dhiren Audich. All rights reserved.</p>
-	<p>Made with <a href="https://svelte.dev/docs/kit/introduction">SvelteKit</a>.
+    <p>&copy; {new Date().getFullYear()} <a href="https://audich.net/">Dhiren Audich</a>. All rights reserved.</p>
+	  <p>Made with <a href="https://github.com/daudich/banyan">Banyan</a> &amp; <a href="https://svelte.dev/docs/kit/introduction">SvelteKit</a>.
   </div>
 </footer>
