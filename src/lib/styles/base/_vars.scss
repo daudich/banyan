@@ -1,0 +1,78 @@
+/// This file defines all of the variables used on the site.
+
+@use 'sass:map';
+
+@use '../components/fonts';
+
+$light-theme: false !default;
+
+$brand-colours: (
+	'black': hsla(230, 60%, 9%, 1),
+	'white': hsla(39, 57%, 88%, 1),
+	'yellow': hsla(39, 66%, 55%, 1)
+);
+
+$dark-theme-colours: (
+	'paper': map.get($brand-colours, 'black'),
+	'ink': map.get($brand-colours, 'white'),
+	'ink-h1': map.get($brand-colours, 'yellow')
+);
+
+$light-theme-colours: (
+	'paper': map.get($brand-colours, 'white'),
+	'ink': map.get($brand-colours, 'black'),
+	'ink-h1': map.get($brand-colours, 'yellow')
+);
+
+$font: (
+	heading: ('Raleway', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		'Helvetica Neue', Arial, sans-serif),
+	body: ('Libertine', Georgia, serif),
+	code: ('Ubuntu Mono', Consolas, Monaco, 'Andale Mono', monospace),
+	weight: 400,
+	weight-bold: 700
+);
+
+$_quarterNote: 1.25rem;
+$size: (
+	sixteenthNote: calc($_quarterNote / 4),
+	eighthNote: calc($_quarterNote / 2),
+	quarterNote: $_quarterNote,
+	dottedQuarterNote: calc($_quarterNote * 1.5),
+	halfNote: calc($_quarterNote * 2),
+	dottedHalfNote: calc($_quarterNote * 3),
+	wholeNote: calc($_quarterNote * 4),
+	tiedWholeNote: calc($_quarterNote * 5),
+	dottedWholeNote: calc($_quarterNote * 6)
+);
+
+$breakpoints: (
+	xxs: 34rem,
+	xs: 42rem,
+	sm: 56rem,
+	md: 66rem,
+	lg: 82rem,
+	xl: 92rem,
+	xxl: 108rem,
+	xxxl: 122rem
+);
+
+:root {
+	--margin: $_quarterNote;
+
+	@media (min-width: map.get($breakpoints, 'xs')) {
+		--margin: var(--halfNote);
+	}
+
+	@media (min-width: map.get($breakpoints, 'sm')) {
+		--margin: var(--dottedHalfNote);
+	}
+
+	@media (min-width: map.get($breakpoints, 'xxl')) {
+		--margin: var(--wholeNote);
+	}
+
+	@media (min-width: map.get($breakpoints, 'xxxl')) {
+		--margin: var(--dottedWholeNote);
+	}
+}

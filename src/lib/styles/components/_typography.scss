@@ -1,0 +1,34 @@
+/// This file defines all of the font stylings.
+
+@use '../utils/functions' as _;
+
+body, p {
+    font-family: _.font('body');
+    font-weight: _.font('weight');
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    font-family: _.font('heading');
+    font-weight: _.font('weight-bold');
+}
+
+code, .code {
+    font-family: _.font('code');
+    font-weight: _.font('weight');
+}
+
+h1, .h1 {
+	font-size: 2rem;
+	position: relative;
+	margin-top: _.size(--quarterNote);
+	font-weight: normal;
+
+	@media (min-width: _.breakpoints('xs')) {
+		font-size: 2.6rem;
+	}
+}

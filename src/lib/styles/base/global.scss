@@ -1,0 +1,19 @@
+/// This is the main SASS files where everything is imported.
+
+@use './vars';
+@use '../components/preferences';
+@use '../components/typography';
+@use '../components/layout';
+
+body {
+	margin: 0;
+}
+
+main:focus {
+	outline: none;
+}
+
+main {
+	padding: 0;
+	margin: 0;
+}

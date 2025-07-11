@@ -1,0 +1,15 @@
+/// This file contains the styles for the page matter itself without the header and the footer.
+
+@use '../base/vars';
+@use '../utils/functions' as _;
+
+.layout {
+    margin: _.size('quarterNote') _.size('wholeNote') _.size('quarterNote') _.size('wholeNote');
+	width: calc(100% - (var(--margin) * 2));
+	position: relative;
+	background: transparent;
+
+    main {
+        width: 100%;
+    }
+}
