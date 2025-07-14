@@ -5,6 +5,11 @@
 
 footer {
     padding: _.size('halfNote') _.size('wholeNote');
+    display: flex;
+    gap: _.size('wholeNote');
+    flex-direction: flex-end;
+    align-items: flex-end;
+    background-color: _.palette(vars.$light-theme, 'footer-paper');
 
     .column {
         text-align: left;
@@ -17,10 +22,7 @@ footer {
         }
 
         ul {
-         // #   margin: 0;
             list-style-type: none;
-           // # display: flex;
-            // #gap: 1rem;
         }
 
         a {

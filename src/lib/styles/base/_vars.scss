@@ -8,20 +8,26 @@ $light-theme: false !default;
 
 $brand-colours: (
 	'black': hsla(230, 60%, 9%, 1),
+	'night': hsla(220, 69%, 23%, 1),
 	'white': hsla(39, 57%, 88%, 1),
-	'yellow': hsla(39, 66%, 55%, 1)
+	'dark-yellow': hsla(39, 66%, 55%, 1),
+	'purple': hsla(253, 47%, 37%, 1),
+	'violet': hsla(241, 43%, 31%, 1),
+	'yellow': hsla(50, 96%, 48%, 1)
 );
 
 $dark-theme-colours: (
 	'paper': map.get($brand-colours, 'black'),
+	'footer-paper': map.get($brand-colours, 'night'),
 	'ink': map.get($brand-colours, 'white'),
 	'ink-h1': map.get($brand-colours, 'yellow')
 );
 
 $light-theme-colours: (
 	'paper': map.get($brand-colours, 'white'),
+	'footer-paper': map.get($brand-colours, 'purple'),
 	'ink': map.get($brand-colours, 'black'),
-	'ink-h1': map.get($brand-colours, 'yellow')
+	'ink-h1': map.get($brand-colours, 'dark-yellow')
 );
 
 $font: (
