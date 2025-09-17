@@ -1,6 +1,6 @@
 <script>
 	export let data;
-	const { title, date, categories, Content } = data;
+	const { title, subtitle, date, categories, Content } = data;
 </script>
 
 <svelte:head>
@@ -9,8 +9,10 @@
 </svelte:head>
 
 <article>
+	<img src="/data/{hero}">
 	<h1>{title}</h1>
-	<p>Published: {date}</p>
+	<h2>{subtitle}</h2>
+	<h3>Published On: {date}</h3>
 
 	{#if categories.length}
 		<aside>
