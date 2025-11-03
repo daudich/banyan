@@ -1,6 +1,6 @@
 <script>
 	export let data;
-	const { title, subtitle, date, categories, Content } = data;
+	const { title, subtitle, date, hero, categories, Content } = data;
 </script>
 
 <svelte:head>

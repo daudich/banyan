@@ -13,16 +13,16 @@
   <div class="column">
     <h4>Links</h4>
     <ul>
-      <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
-      <li><a href="https://twitter.com/yourusername" target="_blank">Twitter</a></li>
+      <li><a href="https://github.com/daudich" target="_blank">GitHub</a></li>
+      <li><a href="https://x.com/yourusername" target="_blank">X</a></li>
       <li><a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a></li>
       <li><a href="https://yourblog.com" target="_blank">Blog</a></li>
 
     </ul>
   </div>
 
-  <div class="column info">
+  <div class="column info"k>
     <p>&copy; {new Date().getFullYear()} <a href="https://audich.net/">Dhiren Audich</a>. All rights reserved.</p>
-	  <p>Made with <a href="https://github.com/daudich/banyan">Banyan</a> &amp; <a href="https://svelte.dev/docs/kit/introduction">SvelteKit</a>.
+	  <p>Made with <a href="https://github.com/daudich/banyan">Banyan</a> &amp; <a href="https://svelte.dev/docs/kit/introduction">SvelteKit</a>.</p>
   </div>
 </footer>
