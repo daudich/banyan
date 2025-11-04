@@ -1,6 +1,6 @@
 <script>
 	export let data;
-	const { title, subtitle, date, hero, categories, Content } = data;
+	const { title, subtitle, date, hero, hero-alt, categories, Content } = data;
 </script>
 
 <svelte:head>
@@ -9,7 +9,10 @@
 </svelte:head>
 
 <article>
-	<img src="/data/{hero}">
+	<div class="hero">
+		<img src="/images/{hero}" alt="{hero-alt}">
+	</div>
+
 	<h1>{title}</h1>
 	<h2>{subtitle}</h2>
 	<h3>Published On: {date}</h3>
