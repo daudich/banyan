@@ -7,6 +7,7 @@
 	<ul>
 		{#each posts as post}
 			<li>
+				<img src="images/{post.meta.hero}" alt={post.meta.hero_alt}>
 				<h2>
 					<a href={post.path}>
 						{post.meta.title}
