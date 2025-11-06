@@ -9,13 +9,13 @@
 </svelte:head>
 
 <article>
-	<div class="hero">
-		<img src="/images/{hero}" alt={hero_alt}>
-	</div>
-
 	<h1>{title}</h1>
 	<h2>{subtitle}</h2>
 	<h3>Published On: {date}</h3>
+
+	<div class="hero">
+		<img src="/images/{hero}" alt={hero_alt}>
+	</div>
 
 	{#if categories.length}
 		<aside>
