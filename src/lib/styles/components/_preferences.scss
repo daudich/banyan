@@ -6,8 +6,6 @@
 
 @use '../base/vars';
 @use '../utils/functions' as _;
-@use './header';
-@use './footer';
 
 #banyan {
     background: _.palette(vars.$light-theme, 'paper');

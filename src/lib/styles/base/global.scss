@@ -1,9 +1,7 @@
 /// This is the main SASS files where everything is imported.
 
 @use './vars';
-@use '../components/preferences';
-@use '../components/typography';
-@use '../components/layout';
+@use '../components';
 
 body {
 	margin: 0;

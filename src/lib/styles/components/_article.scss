@@ -1,0 +1,34 @@
+@use '../utils/functions' as _;
+@use '../base/vars';
+
+article {
+	max-width: 60rem;
+	margin: 0 auto;
+
+	h1 {
+		color: _.palette(vars.$light-theme, 'ink-h1');
+		position: relative;
+	}
+
+	h1::after {
+		content: '';
+		position: absolute;
+		bottom: -5px; /* adjust this value to change the distance */
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background-color: _.palette(vars.$light-theme, 'ink-h1');
+	}
+
+	.hero {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
