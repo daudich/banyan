@@ -5,6 +5,7 @@
 body, p {
     font-family: _.font('body');
     font-weight: _.font('weight');
+	font-size: 1.5rem;
 }
 
 h1, .h1,
@@ -15,6 +16,7 @@ h5, .h5,
 h6, .h6 {
     font-family: _.font('heading');
     font-weight: _.font('weight-bold');
+	font-size: 1.75rem;
 }
 
 code, .code {

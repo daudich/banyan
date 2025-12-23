@@ -20,6 +20,12 @@ article {
 		background-color: _.palette(vars.$light-theme, 'ink-h1');
 	}
 
+	.date {
+		h3 {
+			font-size: 1.25rem;
+		}
+	}
+
 	.hero {
 		width: 100%;
 		height: 100%;
