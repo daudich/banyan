@@ -11,10 +11,10 @@
 	</div>
 	
 	<div class="date">
-		<h3>Published On: {article.date}</h3>
+		<p><strong>Published On:</strong> {article.date}</p>
 
 		{#if article.update &&	article.update != article.date }
-			<h3>Last Updated On: {article.update}</h3>
+			<p><strong>Updated On:</strong> {article.update}</p>
 		{/if}
 	</div>
 
