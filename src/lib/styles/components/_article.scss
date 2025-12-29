@@ -11,6 +11,10 @@ article {
 		position: relative;
 	}
 
+	h1, h2 {
+		padding-bottom: _.size(eighthNote);
+	}
+	
 	.date {
 		position: relative;
 		margin: _.size(halfNote) auto;
@@ -34,13 +38,13 @@ article {
 
 	.hero {
 		position: relative;
-		
-		img {
-			position: relative;
-			left: 50%;
-			transform: translateX(-50%);
-			// max-width: 100%;
-			// height: auto;
-		}
+		overflow: hidden;
+		width: 100vw;
+		margin-left: 50%;
+		transform: translateX(-50%);
+		aspect-ratio: 16/9;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 }

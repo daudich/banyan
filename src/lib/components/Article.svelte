@@ -6,9 +6,7 @@
 	<h1>{article.title}</h1>
 	<h2>{article.subtitle}</h2>
 	
-	<div class="hero">
-		<img src="/images/{article.hero}" alt={article.hero_alt}>
-	</div>
+	<div class="hero" title="{article.hero_alt}" style="background-image: url('/images/{article.hero}')"></div>
 	
 	<div class="date">
 		<p><strong>Published On:</strong> {article.date}</p>
