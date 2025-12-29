@@ -25,12 +25,12 @@ code, .code {
 }
 
 h1, .h1 {
-	font-size: 2rem;
+	font-size: _.size(dottedHalfNote);
 	position: relative;
-	margin-top: _.size(--quarterNote);
-	font-weight: normal;
+	margin: _.size(quarterNote) auto;
+	font-weight: bold;
 
-	@media (min-width: _.breakpoints('xs')) {
-		font-size: 2.6rem;
+	@media (max-width: _.breakpoints('xxs')) {
+		font-size: _.size(halfNote);
 	}
 }
