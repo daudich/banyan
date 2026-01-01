@@ -13,7 +13,13 @@
     $result: ();
 
     @each $key in $keys {
-        $result: list.append($result, map.get($map, $key));
+        $val: map.get($map, $key);
+
+        @if $val {
+            $result: list.append($result, $val);
+        } @else {
+            @warn "Key '#{$key}' not found in the map.";
+        }
     }
 
     @return $result;
@@ -30,7 +36,7 @@
 /// @param {string} $keys Key(s).
 /// @return {string} Value.
 @function size($keys...) {
-	@return _val(vars.$size, $keys...);
+    @return _val(vars.$size, $keys...);
 }
 
 /// Gets the breakpoint value for the given key.
@@ -41,7 +47,7 @@
 }
 
 /// Gets the colour values for either dark or light.
-/// @param {boolean} $dark Dark [true]
+/// @param {boolean} $light Light [true]
 /// @param {string} $keys Key(s)
 /// @return {string} Value
 @function palette($light, $keys...) {
