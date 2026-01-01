@@ -15,6 +15,8 @@
 			<p><strong>Updated On:</strong> {article.update}</p>
 		{/if}
 	</div>
+	
+	<article.Content />
 
 	{#if article.categories.length}
 		<aside>
@@ -30,6 +32,4 @@
 			</ul>
 		</aside>
 	{/if}
-
-	<article.Content />
 </article>
