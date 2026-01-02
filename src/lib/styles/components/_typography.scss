@@ -5,7 +5,12 @@
 body, p {
     font-family: _.font('body');
     font-weight: _.font('weight');
-	font-size: 1.5rem;
+	font-size: clamp(
+		#{_.font(fontSizeMinBody)},
+		#{_.font(fontSizeBody)},
+		#{_.font(fontSizeMaxBody)}
+	);
+	line-height: #{_.font('lineHeight')};
 }
 
 h1, .h1,
@@ -16,7 +21,11 @@ h5, .h5,
 h6, .h6 {
     font-family: _.font('heading');
     font-weight: _.font('weight-bold');
-	font-size: 1.75rem;
+	font-size: clamp(
+		#{_.font(fontSizeMinHeading)},
+		#{_.font(fontSizeHeading)},
+		#{_.font(fontSizeMaxHeading)}
+	);
 }
 
 code, .code {
@@ -25,16 +34,20 @@ code, .code {
 }
 
 h1, .h1 {
-	font-size: _.size(dottedHalfNote);
+	font-size: clamp(
+		#{_.size(halfNote)},
+		#{_.size(dottedHalfNote)},
+		#{_.size(wholeNote)}
+	);
 	position: relative;
 	margin: _.size(quarterNote) auto;
 	font-weight: bold;
-
-	@media (max-width: _.breakpoints('xxs')) {
-		font-size: _.size(halfNote);
-	}
 }
 
 h2, .h2 {
-	font-size: _.size(dottedQuarterNote);
+	font-size: clamp(
+		#{_.size(quarterNote)},
+		#{_.size(dottedQuarterNote)},
+		#{_.size(halfNote)}
+	);
 }

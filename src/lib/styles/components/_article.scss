@@ -22,7 +22,7 @@ article {
 		
 		p {
 			font-family: _.font('heading');
-			font-size: _.size(quarterNote);
+			font-size: calc(0.8 * #{_.size(quarterNote)});
 			margin: _.size(sixteenthNote) auto;
 		}
 		
