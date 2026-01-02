@@ -11,21 +11,22 @@ article {
 		position: relative;
 	}
 
-	h1, h2 {
+	h1,
+	h2 {
 		padding-bottom: _.size(eighthNote);
 	}
-	
+
 	.date {
 		position: relative;
 		margin: _.size(halfNote) auto;
 		margin-top: _.size(wholeNote);
-		
+
 		p {
 			font-family: _.font('heading');
 			font-size: calc(0.8 * #{_.size(quarterNote)});
 			margin: _.size(sixteenthNote) auto;
 		}
-		
+
 		::before {
 			content: '';
 			position: absolute;
@@ -47,5 +48,11 @@ article {
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
+	}
+
+	.date+p::first-letter {
+		font-size: 8rem;
+		float: left;
+		margin: 0.6rem 0.6rem 0 0;
 	}
 }
