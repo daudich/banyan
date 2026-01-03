@@ -4,10 +4,15 @@
 
 <article>
 	<h1>{article.title}</h1>
-	<h2>{article.subtitle}</h2>
+
+	{#if article.subtitle}
+		<h2>{article.subtitle}</h2>
+	{/if}
 	
-	<div class="hero" title="{article.hero_alt}" style="background-image: url('/images/{article.hero}')"></div>
-	
+	{#if article.hero}
+		<div class="hero" title="{article.hero_alt}" style="background-image: url('/images/{article.hero}')"></div>
+	{/if}
+
 	<div class="date">
 		<p><strong>Published On:</strong> {article.date}</p>
 
