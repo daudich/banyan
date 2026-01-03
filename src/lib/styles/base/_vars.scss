@@ -20,14 +20,16 @@ $dark-theme-colours: (
 	'paper': map.get($brand-colours, 'black'),
 	'footer-paper': map.get($brand-colours, 'night'),
 	'ink': map.get($brand-colours, 'white'),
-	'ink-h1': map.get($brand-colours, 'yellow')
+	'ink-h1': map.get($brand-colours, 'yellow'),
+	'ink-highlight': map.get($brand-colours, 'purple')
 );
 
 $light-theme-colours: (
 	'paper': map.get($brand-colours, 'white'),
 	'footer-paper': map.get($brand-colours, 'purple'),
 	'ink': map.get($brand-colours, 'black'),
-	'ink-h1': map.get($brand-colours, 'dark-yellow')
+	'ink-h1': map.get($brand-colours, 'dark-yellow'),
+	'ink-highlight': map.get($brand-colours, 'violet')
 );
 
 $font: (

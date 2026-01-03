@@ -20,8 +20,8 @@
 
 	{#if article.categories.length}
 		<aside>
-			<h2>Posted in:</h2>
-			<ul>
+			<h4><b>Published under:</b></h4>
+			<ul class="categories">
 				{#each article.categories as category}
 					<li>
 						<a href="/blog/category/{category}">
