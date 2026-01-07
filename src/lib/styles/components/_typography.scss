@@ -6,11 +6,11 @@ body, p {
     font-family: _.font('body');
     font-weight: _.font('weight');
 	font-size: clamp(
-		#{_.font(fontSizeMinBody)},
-		#{_.font(fontSizeBody)},
-		#{_.font(fontSizeMaxBody)}
+		_.font(size-body-min),
+		_.font(size-body),
+		_.font(size-body-max),
 	);
-	line-height: #{_.font('lineHeight')};
+	line-height: #{_.font('line-height')};
 }
 
 h1, .h1,
@@ -21,16 +21,7 @@ h5, .h5,
 h6, .h6 {
     font-family: _.font('heading');
     font-weight: _.font('weight-bold');
-	font-size: clamp(
-		#{_.font(fontSizeMinHeading)},
-		#{_.font(fontSizeHeading)},
-		#{_.font(fontSizeMaxHeading)}
-	);
-}
-
-code, .code {
-    font-family: _.font('code');
-    font-weight: _.font('weight');
+    line-height: _.font('line-height');
 }
 
 h1, .h1 {
@@ -60,4 +51,9 @@ h4, .h4 {
 	);
 	text-transform: uppercase;
 	font-weight: bold;
+}
+
+code, pre, .code {
+    font-family: _.font('code');
+    font-weight: _.font('weight');
 }

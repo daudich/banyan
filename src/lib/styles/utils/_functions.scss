@@ -26,10 +26,10 @@
 }
 
 /// Gets the font value for the given key.
-/// @param {string} $keys Key(s)
-/// @return {string} Value
-@function font($keys...) {
-	@return _val(vars.$font, $keys...);
+/// @param {string} $keys Key
+/// @return {string} Associated font-Value
+@function font($key) {
+    @return var(--font-#{$key});
 }
 
 /// Gets the size value for the given key.

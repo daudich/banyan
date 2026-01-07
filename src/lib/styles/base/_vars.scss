@@ -32,22 +32,6 @@ $light-theme-colours: (
 	'ink-highlight': map.get($brand-colours, 'violet')
 );
 
-$font: (
-	heading: ('Raleway', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
-		'Helvetica Neue', Arial, sans-serif),
-	body: ('Libertine', Georgia, serif),
-	code: ('Ubuntu Mono', Consolas, Monaco, 'Andale Mono', monospace),
-	weight: 400,
-	weight-bold: 700,
-	fontSizeMinBody: 1.382rem,
-	fontSizeBody: 1.618rem,
-	fontSizeMaxBody: 2rem,
-	fontSizeMinHeading: 1.618rem,
-	fontSizeHeading: 2rem,
-	fontSizeMaxHeading: 2.382rem,
-	lineHeight: 1.25
-);
-
 $_quarterNote: 1.25rem;
 $size: (
 	sixteenthNote: calc($_quarterNote / 4),

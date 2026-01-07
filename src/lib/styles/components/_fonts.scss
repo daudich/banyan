@@ -1,11 +1,29 @@
+$families: (
+  heading: ('Raleway', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif),
+  body: ('Libertine', Georgia, serif),
+  code: ('Ubuntu Mono', Consolas, Monaco, 'Andale Mono', monospace)
+);
+
+$settings: (
+	weight: 400,
+	weight-bold: 700,
+	line-height: 1.25,
+	size-body-min: 1.382rem,
+	size-body: 1.618rem,
+	size-body-max: 2rem,
+	size-heading-min: 1.618rem,
+	size-heading: 2rem,
+	size-heading-max: 2.382rem
+);
+
 @font-face {
 	font-family: 'Libertine';
 	src:
 		local('Libertine'),
 		url('/fonts/LinLibertine_R.otf') format('opentype');
 	font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -14,8 +32,8 @@
 		local('Raleway'),
 		url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 	font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -23,7 +41,17 @@
 	src:
 		local('Ubuntu Mono'),
 		url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+:root {
+  @each $name, $stack in $families {
+    --font-#{$name}: #{$stack};
+  }
+
+  @each $name, $value in $settings {
+    --font-#{$name}: #{$value};
+  }
 }
