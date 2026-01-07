@@ -30,9 +30,19 @@ $settings: (
 	font-family: 'Raleway';
 	src:
 		local('Raleway'),
-		url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-	font-weight: normal;
+		url('/fonts/Raleway-VariableFont_wght.ttf') format('truetype');
+	font-weight: 100 900;
 	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src:
+		local('Raleway'),
+		url('/fonts/Raleway-Italic-VariableFont_wght.ttf') format('truetype');
+	font-weight: 100 900;
+	font-style: italic;
 	font-display: swap;
 }
 
@@ -47,11 +57,11 @@ $settings: (
 }
 
 :root {
-  @each $name, $stack in $families {
-    --font-#{$name}: #{$stack};
-  }
+	@each $name, $stack in $families {
+		--font-#{$name}: #{$stack};
+	}
 
-  @each $name, $value in $settings {
-    --font-#{$name}: #{$value};
-  }
+	@each $name, $value in $settings {
+		--font-#{$name}: #{$value};
+	}
 }
