@@ -3,14 +3,14 @@
 @use '../utils/functions' as _;
 
 body, p {
-    font-family: _.font('body');
-    font-weight: _.font('weight');
+    font-family: _.font(body);
+    font-weight: _.font(weight);
 	font-size: clamp(
 		_.font(size-body-min),
 		_.font(size-body),
 		_.font(size-body-max),
 	);
-	line-height: #{_.font('line-height')};
+	line-height: _.font('line-height');
 }
 
 h1, .h1,
@@ -20,7 +20,7 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
     font-family: _.font('heading');
-    font-weight: _.font('weight-bold');
+    font-weight: _.font('weight');
     line-height: _.font('line-height');
 }
 
@@ -32,7 +32,7 @@ h1, .h1 {
 	);
 	position: relative;
 	margin: _.size(quarterNote) auto;
-	font-weight: bold;
+	font-weight: _.font(weight);
 }
 
 h2, .h2 {
@@ -50,10 +50,8 @@ h4, .h4 {
 		#{_.size(dottedQuarterNote)}
 	);
 	text-transform: uppercase;
-	font-weight: bold;
 }
 
 code, pre, .code {
     font-family: _.font('code');
-    font-weight: _.font('weight');
 }
