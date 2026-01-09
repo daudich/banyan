@@ -7,9 +7,11 @@
 	<ul>
 		{#each posts as post}
 			<li>
-				<img src="images/{post.meta.hero}" alt={post.meta.hero_alt}>
+				{#if post.meta.hero}
+					<img src="images/{post.meta.hero}" alt={post.meta.hero_alt} />
+				{/if}
 				<h2>
-					<a href={post.path}>
+					<a href="blog/{post.path}">
 						{post.meta.title}
 					</a>
 				</h2>
