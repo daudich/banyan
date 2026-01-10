@@ -3,7 +3,7 @@
 @use '../utils/functions' as _;
 
 header {
-    padding: _.size('halfNote') _.size('wholeNote');
+    padding: _.size(halfNote) _.size(wholeNote);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -15,7 +15,7 @@ header {
         display: flex;
         gap: 1rem;
     }
-    
+
     a {
         text-decoration: none;
         color: inherit;

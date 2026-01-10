@@ -4,9 +4,9 @@
 @use '../base/vars';
 
 footer {
-    padding: _.size('halfNote') _.size('wholeNote');
+    padding: _.size(halfNote) _.size(wholeNote);
     display: flex;
-    gap: _.size('wholeNote');
+    gap: _.size(wholeNote);
     flex-direction: flex-end;
     align-items: flex-end;
     background-color: _.palette(vars.$light-theme, 'footer-paper');
@@ -16,9 +16,9 @@ footer {
 
         h4 {
             border-left: 4px solid _.palette(vars.$light-theme, 'ink-h1');
-            padding-left: _.size('quarterNote');
+            padding-left: _.size(quarterNote);
             text-transform: uppercase;
-            font-size: _.size('quarterNote');
+            font-size: _.size(quarterNote);
         }
 
         ul {

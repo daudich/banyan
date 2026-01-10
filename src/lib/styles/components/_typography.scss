@@ -26,9 +26,9 @@ h6, .h6 {
 
 h1, .h1 {
 	font-size: clamp(
-		#{_.size(halfNote)},
-		#{_.size(dottedHalfNote)},
-		#{_.size(wholeNote)}
+		_.size(halfNote),
+		_.size(dottedHalfNote),
+		_.size(wholeNote)
 	);
 	position: relative;
 	margin: _.size(quarterNote) auto;
@@ -37,17 +37,17 @@ h1, .h1 {
 
 h2, .h2 {
 	font-size: clamp(
-		#{_.size(quarterNote)},
-		#{_.size(dottedQuarterNote)},
-		#{_.size(halfNote)}
+		_.size(quarterNote),
+		_.size(dottedQuarterNote),
+		_.size(halfNote)
 	);
 }
 
 h4, .h4 {
     font-size: clamp(
-		#{_.size(eighthNote)},
-		#{_.size(quarterNote)},
-		#{_.size(dottedQuarterNote)}
+		_.size(eighthNote),
+		_.size(quarterNote),
+		_.size(dottedQuarterNote)
 	);
 	text-transform: uppercase;
 }

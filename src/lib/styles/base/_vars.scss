@@ -57,6 +57,10 @@ $breakpoints: (
 );
 
 :root {
+    @each $name, $value in $size {
+		--#{$name}: #{$value};
+	}
+
 	--margin: $_quarterNote;
 
 	@media (min-width: map.get($breakpoints, 'xs')) {

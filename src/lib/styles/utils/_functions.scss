@@ -35,8 +35,8 @@
 /// Gets the size value for the given key.
 /// @param {string} $keys Key(s).
 /// @return {string} Value.
-@function size($keys...) {
-    @return _val(vars.$size, $keys...);
+@function size($key) {
+    @return var(--#{$key});
 }
 
 /// Gets the breakpoint value for the given key.
