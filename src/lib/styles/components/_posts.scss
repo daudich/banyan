@@ -1,0 +1,29 @@
+@use '../utils/functions' as _;
+@use '../base/vars';
+
+.posts {
+    padding: _.size(wholeNote);
+
+    .postcard {
+        display: flex;
+        width: 100%;
+        padding: _.size(halfNote);
+
+        .hero, .info {
+            flex-basis: 50%;
+            padding: _.size(quarterNote);
+        }
+
+        .hero {
+            img {
+                border-radius: _.size(halfNote);
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        .info {
+
+        }
+    }
+}

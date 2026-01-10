@@ -6,4 +6,6 @@
 
 <h1>Blog</h1>
 
-<Posts posts={data.posts}/>
+<div class="posts">
+	<Posts posts={data.posts} />
+</div>
