@@ -6,11 +6,6 @@
 {#if posts.length}
 	{#each posts as post}
 		<div class="postcard">
-			<div class="hero">
-				{#if post.meta.hero}
-					<img src="images/{post.meta.hero}" alt={post.meta.hero_alt} />
-				{/if}
-			</div>
 			<div class="info">
 				<h2>
 					<a href="blog/{post.path}">
@@ -22,6 +17,11 @@
 				{#each post.meta.categories as category}
 					<span class="tag">{category}</span>
 				{/each}
+			</div>
+			<div class="hero">
+				{#if post.meta.hero}
+					<img src="images/{post.meta.hero}" alt={post.meta.hero_alt} />
+				{/if}
 			</div>
 		</div>
 	{/each}
