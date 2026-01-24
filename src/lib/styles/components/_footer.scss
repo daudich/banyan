@@ -9,13 +9,13 @@ footer {
     gap: _.size(wholeNote);
     flex-direction: flex-end;
     align-items: flex-end;
-    background-color: _.palette(vars.$light-theme, 'footer-paper');
+    background-color: _.palette('dark-footer-paper');
 
     .column {
         text-align: left;
 
         h4 {
-            border-left: 4px solid _.palette(vars.$light-theme, 'ink-h1');
+            border-left: 4px solid _.palette('dark-ink-h1');
             padding-left: _.size(quarterNote);
             text-transform: uppercase;
             font-size: _.size(quarterNote);

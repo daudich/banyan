@@ -61,6 +61,18 @@ $breakpoints: (
 		--#{$name}: #{$value};
 	}
 
+	@each $name, $value in $brand-colours {
+        --#{$name}: #{$value};
+    }
+
+    @each $name, $value in $dark-theme-colours {
+        --dark-#{$name}: #{$value};
+    }
+
+    @each $name, $value in $light-theme-colours {
+        --#{$name}: #{$value};
+    }
+
 	--margin: $_quarterNote;
 
 	@media (min-width: map.get($breakpoints, 'xs')) {

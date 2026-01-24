@@ -8,8 +8,8 @@
 @use '../utils/functions' as _;
 
 #banyan {
-    background: _.palette(vars.$light-theme, 'paper');
-	color: _.palette(vars.$light-theme, 'ink');
+    background: _.palette('dark-paper');
+	color: _.palette('dark-ink');
 	min-height: 100vh;
 	display: grid;
 	grid-template-columns: 100%;

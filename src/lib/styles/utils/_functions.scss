@@ -50,10 +50,6 @@
 /// @param {boolean} $light Light [true]
 /// @param {string} $keys Key(s)
 /// @return {string} Value
-@function palette($light, $keys...) {
-    @if $light {
-        @return _val(vars.$light-theme-colours, $keys...);
-    }
-
-    @return _val(vars.$dark-theme-colours, $keys...)
+@function palette($key) {
+    @return var(--#{$key})
 }

@@ -7,7 +7,7 @@ article {
 	position: relative;
 
 	h1 {
-		color: _.palette(vars.$light-theme, 'ink-h1');
+		color: _.palette('dark-ink-h1');
 		position: relative;
 	}
 
@@ -34,7 +34,7 @@ article {
 			left: 0;
 			width: 7rem;
 			height: 2px;
-			background-color: _.palette(vars.$light-theme, 'ink-h1');
+			background-color: _.palette('dark-ink-h1');
 		}
 	}
 
@@ -74,14 +74,14 @@ article {
 			}
 
 			a {
-				color: _.palette(vars.$light-theme, 'ink');
+				color: _.palette('dark-ink');
 				display: inline-block;
 				height: 24px;
 				line-height: 24px;
 				position: relative;
 				margin: 0 16px 8px 0;
 				padding: 0 10px 0 12px;
-				background: _.palette(vars.$light-theme, 'ink-highlight');
+				background: _.palette('dark-ink-highlight');
 				-webkit-border-bottom-right-radius: 3px;
 				border-bottom-right-radius: 3px;
 				-webkit-border-top-right-radius: 3px;
@@ -102,7 +102,7 @@ article {
 				left: -12px;
 				width: 0;
 				height: 0;
-				border-color: transparent #{_.palette(vars.$light-theme, 'ink-highlight')} transparent transparent;
+				border-color: transparent #{_.palette('dark-ink-highlight')} transparent transparent;
 				border-style: solid;
 				border-width: 12px 12px 12px 0;
 			}

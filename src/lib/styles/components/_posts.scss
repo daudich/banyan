@@ -4,6 +4,12 @@
 .posts {
     padding: _.size(wholeNote);
 
+    ::before {
+        background-color: _.palette('dark-yellow' );
+        content: '';
+        width: 2px;
+    }
+
     .postcard {
         display: flex;
         width: 100%;
