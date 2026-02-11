@@ -3,24 +3,40 @@
 
 .posts {
     padding: _.size(wholeNote);
-
-    ::before {
-        background-color: _.palette('dark-yellow' );
-        content: '';
-        width: 2px;
-    }
+    position: relative;
 
     .postcard {
+        position: relative;
         display: flex;
-        width: 100%;
+        gap: _.size(quarterNote);
+        align-items: flex-start;
         padding: _.size(halfNote);
 
-        .hero, .info {
-            flex-basis: 50%;
-            padding: _.size(quarterNote);
+        .date {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: _.size(eighthNote) _.size(quarterNote);
+            border-radius: _.size(dottedWholeNote);
+            white-space: nowrap;
+            color: _.palette(yellow);
+            background-color: _.palette(purple);
+            margin: 0;
+            flex: 0 0 auto;
+            font: bolder;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+            gap: 0.5em;
+            min-width: 0;
         }
 
         .hero {
+            flex-basis: 50%;
+            padding: _.size(quarterNote);
             img {
                 border-radius: _.size(halfNote);
                 max-width: 100%;
@@ -28,8 +44,5 @@
             }
         }
 
-        .info {
-
-        }
     }
 }

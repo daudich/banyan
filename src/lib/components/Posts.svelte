@@ -6,13 +6,13 @@
 {#if posts.length}
 	{#each posts as post}
 		<div class="postcard">
+			<p class="date">{post.meta.date}</p>
 			<div class="info">
 				<h2>
 					<a href="blog/{post.path}">
 						{post.meta.title}
 					</a>
 				</h2>
-				<p class="date">{post.meta.date}</p>
 				<p>{post.meta.subtitle}</p>
 				{#each post.meta.categories as category}
 					<span class="tag">{category}</span>
@@ -26,5 +26,5 @@
 		</div>
 	{/each}
 {:else}
-	<p>There are no posts here :(</p>
+	<p>There are no posts here! :(</p>
 {/if}
