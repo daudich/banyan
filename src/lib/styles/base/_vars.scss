@@ -7,29 +7,38 @@
 $light-theme: false !default;
 
 $brand-colours: (
-	'black': hsla(230, 60%, 9%, 1),
-	'night': hsla(220, 69%, 23%, 1),
-	'white': hsla(39, 57%, 88%, 1),
-	'dark-yellow': hsla(39, 66%, 55%, 1),
-	'purple': hsla(253, 47%, 37%, 1),
-	'violet': hsla(241, 43%, 31%, 1),
-	'yellow': hsla(50, 96%, 48%, 1)
+	black: hsla(230, 60%, 9%, 1),
+	white: hsla(39, 57%, 88%, 1),
+
+	blue: hsla(220, 69%, 23%, 1),
+
+	yellow: hsla(50, 96%, 48%, 1),
+	yellow-dark: hsla(39, 66%, 55%, 1),
+    gold: hsla(33, 87, 60, 1),
+    orange: hsla(0, 85, 65, 1),
+
+    ultra-violet: hsla(241, 43%, 31%, 1),
+	purple: hsla(253, 47%, 37%, 1),
+    luxury-purple: hsla(275, 50, 23, 1),
+
+    pink: hsla(320, 70, 43, 1),
+    brink: hsla(337, 88, 56, 1),
 );
 
 $dark-theme-colours: (
-	'paper': map.get($brand-colours, 'black'),
-	'footer-paper': map.get($brand-colours, 'night'),
-	'ink': map.get($brand-colours, 'white'),
-	'ink-h1': map.get($brand-colours, 'yellow'),
-	'ink-highlight': map.get($brand-colours, 'purple')
+	'paper': map.get($brand-colours, black),
+	'footer-paper': map.get($brand-colours, blue),
+	'ink': map.get($brand-colours, white),
+	'ink-h1': map.get($brand-colours, yellow),
+	'ink-highlight': map.get($brand-colours, purple)
 );
 
 $light-theme-colours: (
-	'paper': map.get($brand-colours, 'white'),
-	'footer-paper': map.get($brand-colours, 'purple'),
-	'ink': map.get($brand-colours, 'black'),
-	'ink-h1': map.get($brand-colours, 'dark-yellow'),
-	'ink-highlight': map.get($brand-colours, 'violet')
+	'paper': map.get($brand-colours, white),
+	'footer-paper': map.get($brand-colours, purple),
+	'ink': map.get($brand-colours, black),
+	'ink-h1': map.get($brand-colours, yellow-dark),
+	'ink-highlight': map.get($brand-colours, ultra-violet)
 );
 
 $_quarterNote: 1.25rem;
