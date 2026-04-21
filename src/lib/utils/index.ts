@@ -16,3 +16,22 @@ export const fetchMarkdownPosts = async () => {
 
   return allPosts;
 };
+
+export const fetchMarkdownBooks = async () => {
+  const allBookFiles = import.meta.glob('$lib/data/books/*.md');
+  const iterableBookFiles = Object.entries(allBookFiles);
+
+  const allBooks = await Promise.all(
+    iterableBookFiles.map(async ([path, resolver]) => {
+      const { metadata } = await resolver();
+      const bookPath = path.slice(20, -3);
+
+      return {
+        meta: metadata,
+        path: bookPath
+      };
+    })
+  );
+
+  return allBooks;
+};
