@@ -6,8 +6,8 @@ export const GET = async () => {
 	const allBooks = await fetchMarkdownBooks();
 
 	const sortedBooks = allBooks.sort((a, b) => {
-		return new Date(b.meta.date) - new Date(a.meta.date);
+		return new Date(b.meta.to) - new Date(a.meta.to);
 	});
 
-	return json(sortedPosts);
+	return json(sortedBooks);
 };
