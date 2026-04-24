@@ -1,3 +1,7 @@
+<script>
+	export let data;
+</script>
+
 <h1>Books I've Read</h1>
 
 <div class="motivation">
@@ -19,4 +23,12 @@
 
 <div class="filters"></div>
 
-<div class="book-list"></div>
+<div class="book-list">
+	{#each data.books as book}
+		<div class="book">
+			<title>{book.meta.title}</title>
+			<p>By: {book.meta.author}</p>
+			<p>Read from: {book.meta.from} - {book.meta.to}</p>
+		</div>
+	{/each}
+</div>
