@@ -26,9 +26,10 @@
 <div class="book-list">
 	{#each data.books as book}
 		<div class="book">
-			<title>{book.meta.title}</title>
+			<h2>{book.meta.title}</h2>
 			<p>By: {book.meta.author}</p>
 			<p>Read from: {book.meta.from} - {book.meta.to}</p>
+			<svelte:component this={book.Content} />
 		</div>
 	{/each}
 </div>

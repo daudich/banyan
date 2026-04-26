@@ -4,7 +4,7 @@ export const fetchMarkdownPosts = async () => {
 
   const allPosts = await Promise.all(
     iterablePostFiles.map(async ([path, resolver]) => {
-      const { metadata } = await resolver();
+      const { metadata } = await resolver() as { metadata: Record<string, unknown> };
       const postPath = path.slice(20, -3);
 
       return {
@@ -23,7 +23,7 @@ export const fetchMarkdownBooks = async () => {
 
   const allBooks = await Promise.all(
     iterableBookFiles.map(async ([path, resolver]) => {
-      const { metadata } = await resolver();
+      const { metadata } = await resolver() as { metadata: Record<string, unknown> };
       const bookPath = path.slice(20, -3);
 
       return {

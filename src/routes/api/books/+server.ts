@@ -1,4 +1,3 @@
-// src/routes/api/books/+server.js
 import { fetchMarkdownBooks } from '$lib/utils';
 import { json } from '@sveltejs/kit';
 
@@ -6,7 +5,7 @@ export const GET = async () => {
 	const allBooks = await fetchMarkdownBooks();
 
 	const sortedBooks = allBooks.sort((a, b) => {
-		return new Date(b.meta.to) - new Date(a.meta.to);
+		return new Date(b.meta.to as string).getTime() - new Date(a.meta.to as string).getTime();
 	});
 
 	return json(sortedBooks);
