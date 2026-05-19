@@ -29,6 +29,11 @@
 			<h2>{book.meta.title}</h2>
 			<p>By: {book.meta.author}</p>
 			<p>Read from: {book.meta.from} - {book.meta.to}</p>
+			<ul>
+				{#each book.meta.categories as category}
+					<li>{category}</li>
+				{/each}
+			</ul>
 			<svelte:component this={book.Content} />
 		</div>
 	{/each}
