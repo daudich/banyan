@@ -26,15 +26,19 @@
 <div class="book-list">
 	{#each data.books as book}
 		<div class="book">
-			<h2>{book.meta.title}</h2>
-			<p>By: {book.meta.author}</p>
-			<p>Read from: {book.meta.from} - {book.meta.to}</p>
-			<ul>
-				{#each book.meta.categories as category}
-					<li>{category}</li>
-				{/each}
-			</ul>
-			<svelte:component this={book.Content} />
+			<div class="book-title">
+				<h2>{book.meta.title}</h2>
+				<p>By: {book.meta.author}</p>
+				<p>Read from: {book.meta.from} - {book.meta.to}</p>
+			</div>
+			<div class="book-review">
+				<ul>
+					{#each book.meta.categories as category}
+						<li>{category}</li>
+					{/each}
+				</ul>
+				<svelte:component this={book.Content} />
+			</div>
 		</div>
 	{/each}
 </div>
