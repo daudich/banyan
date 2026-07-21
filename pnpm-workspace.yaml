@@ -1,4 +1,8 @@
+allowBuilds:
+  "@parcel/watcher": true
+  esbuild: true
+  svelte-preprocess: true
 overrides:
-  cookie@<0.7.0: '>=0.7.0'
-  minimatch@>=9.0.0 <9.0.6: '>=9.0.6'
-  minimatch@>=9.0.0 <9.0.7: '>=9.0.7'
+  cookie@<0.7.0: ">=0.7.0"
+  minimatch@>=9.0.0 <9.0.6: ">=9.0.6"
+  minimatch@>=9.0.0 <9.0.7: ">=9.0.7"
