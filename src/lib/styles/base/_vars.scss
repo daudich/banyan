@@ -14,15 +14,15 @@ $brand-colours: (
 
 	yellow: hsla(50, 96%, 48%, 1),
 	yellow-dark: hsla(39, 66%, 55%, 1),
-    gold: hsla(33, 87, 60, 1),
-    orange: hsla(0, 85, 65, 1),
+    gold: hsla(33, 87%, 60%, 1),
+    orange: hsla(0, 85%, 65%, 1),
 
     ultra-violet: hsla(241, 43%, 31%, 1),
 	purple: hsla(253, 47%, 37%, 1),
-    luxury-purple: hsla(275, 50, 23, 1),
+    luxury-purple: hsla(275, 50%, 23%, 1),
 
-    pink: hsla(320, 70, 43, 1),
-    brink: hsla(337, 88, 56, 1),
+    pink: hsla(320, 70%, 43%, 1),
+    brink: hsla(337, 88%, 56%, 1),
 );
 
 $dark-theme-colours: (
@@ -71,7 +71,7 @@ $breakpoints: (
 	}
 
 	@each $name, $value in $brand-colours {
-        --#{$name}: #{$value};
+        --#{"" + $name}: #{$value};
     }
 
     @each $name, $value in $dark-theme-colours {
